@@ -3,6 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="赵仲煊的前端工程师在线简历，聚焦 React、TypeScript、微前端、AI 平台和复杂中后台系统建设。"
+    />
+    <meta name="theme-color" content="#16254e" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="赵仲煊 - 前端工程师简历" />
+    <meta
+      property="og:description"
+      content="6 年前端开发经验，主导 AI 平台、微前端和商家生态核心系统建设。"
+    />
     <title>赵仲煊 - 前端工程师简历</title>
     <style>
       :root {
@@ -28,14 +39,33 @@
         background: linear-gradient(180deg, #edf2f7 0%, #e5edf8 100%);
         color: var(--ink);
         font: 14px/1.7 "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
 
       body {
         padding: 24px;
       }
+
       a {
+        color: inherit;
         text-decoration: none;
+        transition:
+          color 0.2s ease,
+          border-color 0.2s ease,
+          background-color 0.2s ease;
       }
+
+      a:hover {
+        color: var(--brand-2);
+      }
+
+      a:focus-visible {
+        outline: 2px solid rgba(45, 140, 255, 0.6);
+        outline-offset: 3px;
+        border-radius: 8px;
+      }
+
       .resume {
         width: 210mm;
         min-height: 297mm;
@@ -47,7 +77,7 @@
       .hero {
         padding: 36px 42px 28px;
         background:
-          radial-gradient(circle at top right, rgba(72, 129, 255, 0.16), transparent 28%),
+          /* radial-gradient(circle at top right, rgba(72, 129, 255, 0.16), transparent 28%), */
           linear-gradient(135deg, #0f1d44 0%, #16254e 45%, #0d1735 100%);
         color: #fff;
       }
@@ -80,11 +110,33 @@
         color: rgba(255, 255, 255, 0.84);
       }
 
+      .hero-highlights {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .hero-pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 32px;
+        padding: 0 12px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+
       .contact {
         justify-self: end;
         width: 100%;
         max-width: 280px;
         padding: 16px 18px;
+        font-style: normal;
         border: 1px solid rgba(255, 255, 255, 0.14);
         border-radius: 16px;
         background: rgba(255, 255, 255, 0.06);
@@ -108,6 +160,17 @@
         margin-top: 2px;
         color: rgba(255, 255, 255, 0.95);
         word-break: break-all;
+      }
+
+      .contact-value.is-link {
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 255, 255, 0.24);
+        text-underline-offset: 3px;
+      }
+
+      .contact-value.is-link:hover {
+        color: #fff;
+        text-decoration-color: rgba(255, 255, 255, 0.8);
       }
 
       .main {
@@ -139,6 +202,10 @@
       .summary {
         color: #33415c;
         text-align: justify;
+      }
+
+      .summary strong {
+        color: #16254e;
       }
 
       .tags {
@@ -232,6 +299,12 @@
         margin-top: 4px;
       }
 
+      .project-url {
+        max-width: 280px;
+        text-align: right;
+        overflow-wrap: anywhere;
+      }
+
       .project-tags {
         display: flex;
         flex-wrap: wrap;
@@ -263,9 +336,23 @@
       }
 
       @media print {
+        html,
+        body,
+        .resume,
+        .hero,
+        .contact,
+        .tag,
+        .project-tags span,
+        .section-title::before {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
         body {
           padding: 0;
           background: #fff;
+          font-size: 13px;
+          line-height: 1.55;
         }
 
         .resume {
@@ -273,9 +360,102 @@
           min-height: auto;
           box-shadow: none;
         }
+
+        .hero {
+          padding: 28px 34px 20px;
+          background: linear-gradient(135deg, #0f1d44 0%, #16254e 45%, #0d1735 100%);
+        }
+
+        .hero,
+        .contact {
+          color: #fff;
+        }
+
+        .contact {
+          border-color: rgba(255, 255, 255, 0.14);
+          backdrop-filter: blur(6px);
+        }
+
+        .role,
+        .hero-summary,
+        .contact-label,
+        .contact-value,
+        .contact-value.is-link {
+          color: #fff !important;
+          -webkit-text-fill-color: #fff;
+          opacity: 1;
+        }
+
+        .contact-label {
+          color: rgba(255, 255, 255, 0.64);
+        }
+
+        .contact-value.is-link {
+          text-decoration-color: rgba(255, 255, 255, 0.24);
+        }
+
+        .contact a,
+        .contact a:visited,
+        .contact a:hover,
+        .contact a:active {
+          color: #fff !important;
+          -webkit-text-fill-color: #fff;
+        }
+
+        .name,
+        .role,
+        .hero-summary,
+        .hero-pill,
+        .contact-label,
+        .contact-value,
+        .contact-value.is-link {
+          text-shadow: 0 0 1px rgba(15, 29, 68, 0.9);
+          -webkit-text-stroke: 0.2px rgba(15, 29, 68, 0.85);
+        }
+
+        .main {
+          padding: 20px 34px 28px;
+        }
+
+        .section + .section {
+          margin-top: 18px;
+        }
+
+        .hero-summary,
+        .project-tags,
+        ul {
+          margin-top: 8px;
+        }
+
+        li + li {
+          margin-top: 4px;
+        }
+
+        .project {
+          padding: 12px 0 14px;
+        }
+
+        .timeline-item {
+          padding: 10px 0;
+        }
+
+        .contact,
+        .timeline-item,
+        .project-head,
+        .section-title {
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+
+        .project,
+        .section,
+        ul {
+          break-inside: auto;
+          page-break-inside: auto;
+        }
       }
 
-      @media (max-width: 900px) {
+      @media screen and (max-width: 900px) {
         body {
           padding: 0;
         }
@@ -304,9 +484,16 @@
           max-width: none;
         }
 
-        .timeline-date {
+        .timeline-date,
+        .project-url {
           display: block;
           margin-top: 6px;
+          text-align: left;
+          max-width: none;
+        }
+
+        .hero-summary {
+          max-width: none;
         }
       }
     </style>
@@ -316,28 +503,40 @@
       <section class="hero">
         <div class="hero-grid">
           <div>
-            <h1 class="name">赵仲哲</h1>
+            <h1 class="name">赵仲煊</h1>
             <div class="role">前端工程师</div>
             <div class="hero-summary">
-              具备企业级中后台、官网站点、国际化文档站与 AI 平台前端交付经验，既有近阶段 AI
-              产品建设经验，也有服务市场、商家管理、运营后台等项目积累。熟悉 React
-              技术栈、组件化开发、数据展示与复杂业务页面实现，能独立推进从需求梳理到联调上线的完整交付。
+              聚焦 <strong>React + TypeScript</strong> 技术栈，兼具 <strong>AI 平台、微前端架构、复杂中后台</strong>
+              与官网站点建设经验。能够独立推进从需求梳理、方案设计、核心开发到联调上线的完整交付，并持续关注体验、性能和工程质量。
+            </div>
+            <div class="hero-highlights" aria-label="核心亮点">
+              <span class="hero-pill">6 年前端经验</span>
+              <span class="hero-pill">AI 平台建设</span>
+              <span class="hero-pill">微前端落地</span>
+              <span class="hero-pill">复杂中后台</span>
             </div>
           </div>
-          <div class="contact">
+          <address class="contact">
             <div class="contact-item">
               <span class="contact-label">电话</span>
-              <span class="contact-value">18635517772</span>
+              <a class="contact-value is-link" href="tel:18635517772">18635517772</a>
             </div>
             <div class="contact-item">
               <span class="contact-label">邮箱</span>
-              <span class="contact-value">zzxzzx8888@gmail.com</span>
+              <a class="contact-value is-link" href="mailto:zzxzzx8888@gmail.com">zzxzzx8888@gmail.com</a>
             </div>
             <div class="contact-item">
               <span class="contact-label">GitHub</span>
-              <span class="contact-value">https://github.com/sidey-zzy</span>
+              <a
+                class="contact-value is-link"
+                href="https://github.com/sidey-zzy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/sidey-zzy
+              </a>
             </div>
-          </div>
+          </address>
         </div>
       </section>
 
@@ -345,11 +544,9 @@
         <section class="section">
           <h2 class="section-title">个人总结</h2>
           <div class="summary">
-            6年前端开发经验，近 5
-            年深耕阿里淘天商家生态，主导并交付多个核心业务系统。擅长 React + TypeScript
-            技术栈，在微前端架构（Module Federation / ICE Stark）、AI Agent
-            交互界面、复杂中后台系统等方向有丰富的落地实践。具备从 0 到 1
-            搭建平台级产品的架构设计能力，主导素材智能助手平台、服务市场管理平台等多个项目的前端架构方案设计与核心功能开发。注重工程质量与用户体验，在性能优化、埋点体系建设、组件抽象复用等方面持续沉淀，能够独立承担复杂业务模块的技术方案设计与高质量交付。
+            6 年前端开发经验，近 5 年深耕阿里淘天商家生态，持续参与并主导核心业务系统交付。擅长 React +
+            TypeScript 技术栈，在微前端架构、AI Agent 交互界面、复杂中后台系统和国际化站点建设等方向有丰富实践。具备从 0
+            到 1 搭建平台级产品的能力，能够独立承担复杂模块的方案设计、核心开发、联调上线与后续优化，并在性能、埋点、组件复用等方面持续沉淀工程能力。
           </div>
         </section>
 
@@ -437,9 +634,14 @@
                 </a>
                 <div class="project-role">个人开发 / 前端开发</div>
               </div>
-                <a class="timeline-date" href="https://1route.ai" target="_blank" rel="noopener noreferrer">
-                  https://1route.ai
-                </a>
+              <a
+                class="timeline-date project-url"
+                href="https://1route.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                1route.ai
+              </a>
             </div>
             <div class="project-tags">
               <span>React Router v7</span>
@@ -453,26 +655,16 @@
             </div>
             <ul>
               <li>
-                基于 React Router v7 + React 19 RSC
-                模式建设官网与控制台一体化应用，覆盖首页、模型页、价格页、联系页、隐私条款、在线聊天及用户后台等业务场景。
+                基于 React Router v7 + React 19 RSC 构建官网与控制台一体化应用，覆盖品牌展示、模型介绍、在线咨询、充值支付与用户后台等完整链路。
               </li>
               <li>
-                设计并实现基于 URL 的中英文路由方案，统一处理 `/en`
-                前缀、多语言页面切换、首访语言偏好重定向、SEO 元信息与 canonical / alternate 链接输出，兼顾用户体验与搜索收录。
+                设计基于 URL 的中英文路由方案，统一处理 `/en` 前缀、语言切换、首访重定向及 canonical / alternate 输出，兼顾体验与搜索收录。
               </li>
               <li>
-                负责控制台核心模块开发，包括 API Key 管理、用量日志、趋势分析、充值支付、支付记录、模型管理等，并通过服务层封装提升页面与接口解耦能力。
+                负责 API Key 管理、用量日志、趋势分析、充值支付、支付记录和模型管理等核心模块，并通过服务层封装提升页面与接口的解耦能力。
               </li>
               <li>
-                使用 G2 构建用量趋势与模型明细图表，支持按时间范围、模型维度进行分析展示，帮助用户直观查看 API
-                调用与费用分布。
-              </li>
-              <li>
-                推进组件级国际化落地，将页面文案拆分至独立 message
-                文件，降低多语言维护成本；同时补充 robots、sitemap、结构化数据与 Open Graph 元信息，完善站点 SEO 基建。
-              </li>
-              <li>
-                在项目中持续优化官网信息呈现与控制台交互链路，使 AI 平台既覆盖品牌展示与线索收集，也支撑用户接入、充值、查看用量与管理模型的完整闭环。
+                使用 G2 构建用量趋势和模型明细图表，并补充 robots、sitemap、结构化数据与 Open Graph 元信息，完善数据展示与 SEO 基建。
               </li>
             </ul>
           </article>
@@ -485,8 +677,13 @@
                 </a>
                 <div class="project-role">个人开发 / 前端开发</div>
               </div>
-              <a class="timeline-date" href="https://console-global.1route.ai/zh-CN/" target="_blank" rel="noopener noreferrer">
-                https://console-global.1route.ai/zh-CN/
+              <a
+                class="timeline-date project-url"
+                href="https://console-global.1route.ai/zh-CN/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                console-global.1route.ai
               </a>
             </div>
             <div class="project-tags">
@@ -499,19 +696,16 @@
             </div>
             <ul>
               <li>
-                参与 AI 平台管理后台建设，覆盖登录鉴权、分析看板、请求日志、审计日志、用户管理、账单告警、价格调整、模型集成、AI
-                Router、代理配置、插件与消费者管理等复杂中后台模块。
+                参与 AI 平台管理后台建设，覆盖登录鉴权、分析看板、请求日志、审计日志、用户管理、账单告警、模型集成、AI Router 和插件管理等复杂模块。
               </li>
               <li>
-                基于 React Router
-                组织多级路由与权限边界，结合通用布局、全局状态与接口层封装，提升后台在复杂菜单结构下的可维护性与扩展性。
+                基于 React Router 组织多级路由与权限边界，结合通用布局、全局状态与接口层封装，提升复杂菜单结构下的可维护性与扩展性。
               </li>
               <li>
-                使用 Ant Design、CodeMirror、G2 等能力搭建表格、表单、代码配置、图表分析等交互场景，支撑 YAML /
-                JSON 配置查看编辑、调用日志排查与模型路由策略管理。
+                使用 Ant Design、CodeMirror、G2 等能力搭建表格、表单、代码配置与图表分析场景，支撑 YAML / JSON 配置编辑、日志排查和模型路由策略管理。
               </li>
               <li>
-                实现账单导出、价格配置、告警配置等管理能力，并在数据分析页面处理按模型、用户、状态码等维度的聚合展示，提升运营与排障效率。
+                实现账单导出、价格配置、告警配置等运营能力，并支持按模型、用户、状态码等维度的聚合展示，提升运营与排障效率。
               </li>
             </ul>
           </article>
@@ -524,8 +718,13 @@
                 </a>
                 <div class="project-role">个人开发 / 前端开发 / 文档站建设</div>
               </div>
-              <a class="timeline-date" href="https://docs.1route.ai" target="_blank" rel="noopener noreferrer">
-                https://docs.1route.ai
+              <a
+                class="timeline-date project-url"
+                href="https://docs.1route.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                docs.1route.ai
               </a>
             </div>
             <div class="project-tags">
@@ -537,15 +736,13 @@
             </div>
             <ul>
               <li>
-                基于 Docusaurus
-                搭建 OneRoute 产品文档站，沉淀快速开始、模型能力、模型管理与第三方工具集成等内容，支撑平台对外说明与开发者接入。
+                基于 Docusaurus 搭建 OneRoute 产品文档站，沉淀快速开始、模型能力、模型管理与第三方工具集成等内容，支撑平台对外说明与开发者接入。
               </li>
               <li>
-                维护中英文双语文档路由映射与页面结构，覆盖推理、流式响应、图像理解、图片生成、PDF、函数调用、Claude
-                Code、Cline 等能力说明。
+                维护中英文双语文档路由映射与页面结构，覆盖推理、流式响应、图像理解、图片生成、PDF、函数调用等能力说明。
               </li>
               <li>
-                集成本地搜索与多语言文档产出，提升开发者查阅效率；该项目可在简历中简写为“负责 AI 平台中英文文档站与开发者内容建设”。
+                集成本地搜索与多语言文档产出，提升开发者查阅效率，支撑 AI 平台开发者内容建设与对外交付。
               </li>
             </ul>
           </article>
@@ -553,9 +750,7 @@
           <article class="project">
             <div class="project-head">
               <div>
-                <a>
-                  <h3 class="project-title">素材智能助手平台</h3>
-                </a>
+                <h3 class="project-title">素材智能助手平台</h3>
                 <div class="project-role">前端开发</div>
               </div>
               <div class="timeline-date">暂未推广</div>
@@ -589,8 +784,13 @@
                 </a>
                 <div class="project-role">核心前端开发</div>
               </div>
-              <a class="timeline-date" href="https://work.open.taobao.com/" target="_blank" rel="noopener noreferrer">
-                https://work.open.taobao.com/
+              <a
+                class="timeline-date project-url"
+                href="https://work.open.taobao.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                work.open.taobao.com
               </a>
             </div>
             <div class="project-tags">
@@ -602,29 +802,19 @@
             </div>
             <ul>
               <li>
-                面向淘宝服务商生态的 B2B
-                商家服务管理平台，覆盖服务发布、订单履约、结算财务、资质认证、内容案例库等服务全生命周期管理，包含
-                15 个核心功能模块。
+                面向淘宝服务商生态的 B2B 商家服务管理平台，覆盖服务发布、订单履约、结算财务、资质认证、内容案例库等全生命周期管理，包含 15 个核心模块。
               </li>
               <li>
-                架构设计上采用 Module Federation
-                微前端方案，实现模块独立开发与部署；全部 24+ 条路由通过 lazy()
-                动态导入实现代码分割，有效降低首屏加载体积。
+                采用 Module Federation 微前端方案实现模块独立开发与部署，并通过 24+ 条路由的 lazy() 动态导入完成代码分割，降低首屏加载体积。
               </li>
               <li>
-                封装统一的 MTOP 协议通信层，实现 API
-                版本管理与多环境（开发/预发/生产）自动切换，保障接口调用的稳定性与可维护性。
+                封装统一的 MTOP 协议通信层，实现 API 版本管理与多环境自动切换，保障接口调用的稳定性与可维护性。
               </li>
               <li>
                 开发资质认证多步骤引导流程，集成 SOP 表单引擎与自定义 Schema，支持复杂表单的动态渲染与校验。
               </li>
               <li>
-                实现自营结算体系（16
-                个子模块），包含采购单管理、日/月账单统计、拼团/拍卖业务，集成 xlsx 导出、图片裁剪、拖拽排序等交互能力。
-              </li>
-              <li>
-                构建税务报送模块，支持多年/多季度/多主体维度的税务数据查询与 Excel
-                导出，配合抽屉式详情交互。
+                实现 16 个子模块的自营结算体系与税务报送能力，覆盖采购单管理、账单统计、多维查询、Excel 导出、图片裁剪和拖拽排序等复杂交互。
               </li>
             </ul>
           </article>
@@ -637,8 +827,13 @@
                 </a>
                 <div class="project-role">核心前端开发</div>
               </div>
-              <a class="timeline-date" href="https://fuwu.taobao.com/" target="_blank" rel="noopener noreferrer">
-                https://fuwu.taobao.com/
+              <a
+                class="timeline-date project-url"
+                href="https://fuwu.taobao.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                fuwu.taobao.com
               </a>
             </div>
             <div class="project-tags">
@@ -662,13 +857,7 @@
                 详情页方向建设统一微应用架构，单页面支持 9 种服务类型的差异化展示，使用 PageContext 全局状态管理 + PageType 枚举驱动条件渲染，一套代码适配多业务类型的 UI 与数据流。
               </li>
               <li>
-                实现智能色彩适配方案：基于 ColorThief 从服务头图提取主色调，结合 RGB/HSL 色彩空间转换与灰度值判断，动态调整页面信息与文字对比度。
-              </li>
-              <li>
-                开发案例浏览对比组件（FeatureViewer）与多个版本的案例浏览器组件（CaseViewer/V2/V3），支持图文、短视频、摄影案例等场景展示，并集成 Swiper 轮播与 LazyLoad 懒加载。
-              </li>
-              <li>
-                实现千牛工作台与独立页面的跨平台环境适配，针对面包屑导航、Fixed 元素定位、路由方案进行差异化处理，增强复杂业务信息展示场景下的稳定性与可维护性。
+                实现智能色彩适配、案例浏览组件与跨平台环境兼容，处理 ColorThief 主色提取、轮播懒加载、固定定位与路由差异等体验细节。
               </li>
             </ul>
           </article>
@@ -681,8 +870,13 @@
                 </a>
                 <div class="project-role">核心前端开发</div>
               </div>
-              <a class="timeline-date" href="https://myseller.taobao.com/home.htm/qianniu-service-market/" target="_blank" rel="noopener noreferrer">
-                https://myseller.taobao.com/home.htm/qianniu-service-market/
+              <a
+                class="timeline-date project-url"
+                href="https://myseller.taobao.com/home.htm/qianniu-service-market/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                myseller.taobao.com
               </a>
             </div>
             <div class="project-tags">
@@ -694,25 +888,16 @@
             </div>
             <ul>
               <li>
-                千牛商家工作台服务市场 Tab
-                改版项目，承接服务卡片、智能服务、运营服务、商家工具等核心页面，提升个性化推荐、搜索、导购效率、信息触达与订阅续费等服务链路。
+                千牛商家工作台服务市场 Tab 改版项目，承接服务卡片、智能服务、运营服务和商家工具等核心页面，提升推荐、搜索、导购与订阅续费链路。
               </li>
               <li>
-                实现 MT2
-                配置驱动的动态页面渲染方案，支持预发/正式环境自动切换双数据源，实现运营内容热更新（推荐规则、人群标签、全屏弹窗），无需前端发版。
+                实现 MT2 配置驱动的动态页面渲染方案，支持预发/正式环境双数据源切换与运营内容热更新，无需前端发版。
               </li>
               <li>
-                封装高性能 useExposure Hook，基于全局 IntersectionObserver
-                管理器实现按 threshold 分组复用，支持 once 模式一次性曝光检测，覆盖 75+
-                处理点集成。
+                封装高性能 useExposure Hook，基于全局 IntersectionObserver 管理器实现按 threshold 分组复用，支持 once 模式一次性曝光检测，覆盖 75+ 处理点。
               </li>
               <li>
-                开发「我的工具」模块，聚合 20+ 个 MTOP API
-                接口，实现服务详情查看、多维评价提交、优惠券领取、自动续费/到期提醒配置等完整闭环。
-              </li>
-              <li>
-                通过 RemoteModule 动态加载远程模块（SearchBox、AllCatesV2
-                分类选择器），结合 window 级缓存策略避免搜索热词重复请求。
+                开发「我的工具」模块并通过 RemoteModule 动态加载远程模块，聚合 20+ 个 MTOP API，实现工具管理、评价提交、优惠券领取和续费提醒等完整闭环。
               </li>
             </ul>
           </article>
