@@ -266,7 +266,6 @@
         color: #60708f;
         font-weight: 600;
         display: inline-block;
-        border-bottom: 1px dashed currentColor;
       }
 
       .project {
@@ -303,6 +302,7 @@
         max-width: 280px;
         text-align: right;
         overflow-wrap: anywhere;
+        border-bottom: 1px dashed currentColor;
       }
 
       .project-tags {
@@ -484,14 +484,17 @@
           max-width: none;
         }
 
-        .timeline-date,
-        .project-url {
-          display: block;
+        .timeline-date {
+          display: inline-block;
+          width: fit-content;
+          max-width: 100%;
           margin-top: 6px;
           text-align: left;
-          max-width: none;
         }
 
+        .project-url  {
+          display: none;
+        }
         .hero-summary {
           max-width: none;
         }
@@ -632,10 +635,10 @@
                 <a href="https://1route.ai" target="_blank" rel="noopener noreferrer">
                   <h3 class="project-title">OneRoute 官网与用户控制台</h3>
                 </a>
-                <div class="project-role">个人开发 / 前端开发</div>
+                <div class="project-role">个人开发(都是我写的) / 前端开发</div>
               </div>
               <a
-                class="timeline-date project-url"
+                class="project-url"
                 href="https://1route.ai"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -675,10 +678,10 @@
                 <a href="https://console-global.1route.ai/zh-CN/" target="_blank" rel="noopener noreferrer">
                   <h3 class="project-title">1route-console-ui 管理控制台</h3>
                 </a>
-                <div class="project-role">个人开发 / 前端开发</div>
+                <div class="project-role">个人开发(都是我写的) / 前端开发</div>
               </div>
               <a
-                class="timeline-date project-url"
+                class="project-url"
                 href="https://console-global.1route.ai/zh-CN/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -716,10 +719,10 @@
                 <a href="https://docs.1route.ai" target="_blank" rel="noopener noreferrer">
                   <h3 class="project-title">1route-doc 产品文档站</h3>
                 </a>
-                <div class="project-role">个人开发 / 前端开发 / 文档站建设</div>
+                <div class="project-role">个人开发(都是我写的) / 前端开发 / 文档站建设</div>
               </div>
               <a
-                class="timeline-date project-url"
+                class="project-url"
                 href="https://docs.1route.ai"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -753,7 +756,7 @@
                 <h3 class="project-title">素材智能助手平台</h3>
                 <div class="project-role">前端开发</div>
               </div>
-              <div class="timeline-date">暂未推广</div>
+              <div class="project-url">暂未推广</div>
             </div>
             <div class="project-tags">
               <span>React</span>
@@ -785,7 +788,7 @@
                 <div class="project-role">核心前端开发</div>
               </div>
               <a
-                class="timeline-date project-url"
+                class="project-url"
                 href="https://work.open.taobao.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -828,7 +831,7 @@
                 <div class="project-role">核心前端开发</div>
               </div>
               <a
-                class="timeline-date project-url"
+                class="project-url"
                 href="https://fuwu.taobao.com/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -871,7 +874,7 @@
                 <div class="project-role">核心前端开发</div>
               </div>
               <a
-                class="timeline-date project-url"
+                class="project-url"
                 href="https://myseller.taobao.com/home.htm/qianniu-service-market/"
                 target="_blank"
                 rel="noopener noreferrer"

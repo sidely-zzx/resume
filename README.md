@@ -54,7 +54,7 @@
 ### OneRoute 官网与用户控制台
 
 - 项目地址：[https://1route.ai](https://1route.ai)
-- 角色：个人开发 / 前端开发
+- 角色：个人开发(都是我写的) / 前端开发
 - 技术栈：React Router v7、React 19、RSC、TypeScript、Tailwind CSS、G2、AI SDK、国际化
 
 1. 基于 React Router v7 + React 19 RSC 模式建设官网与控制台一体化应用，覆盖首页、模型页、价格页、联系页、隐私条款、在线聊天及用户后台等业务场景。
@@ -67,7 +67,7 @@
 ### 1route-console-ui 管理控制台
 
 - 项目地址：[https://console-global.1route.ai/zh-CN/](https://console-global.1route.ai/zh-CN/)
-- 角色：个人开发 / 前端开发
+- 角色：个人开发(都是我写的) / 前端开发
 - 技术栈：React Router、TypeScript、Ant Design、Zustand、CodeMirror、ExcelJS
 
 1. 参与 AI 平台管理后台建设，覆盖登录鉴权、分析看板、请求日志、审计日志、用户管理、账单告警、价格调整、模型集成、AI Router、代理配置、插件与消费者管理等复杂中后台模块。
@@ -78,7 +78,7 @@
 ### 1route-doc 产品文档站
 
 - 项目地址：[https://docs.1route.ai](https://docs.1route.ai)
-- 角色：个人开发 / 前端开发 / 文档站建设
+- 角色：个人开发(都是我写的) / 前端开发 / 文档站建设
 - 技术栈：Docusaurus、React、TypeScript、本地搜索、中英文文档
 
 1. 基于 Docusaurus 搭建 OneRoute 产品文档站，沉淀快速开始、模型能力、模型管理与第三方工具集成等内容，支撑平台对外说明与开发者接入。
