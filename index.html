@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="赵仲煊的前端工程师在线简历，聚焦 React、TypeScript、微前端、AI 平台和复杂中后台系统建设。"
+      content="赵仲煊的前端工程师在线简历，聚焦 React、TypeScript、微前端、AI 平台、复杂中后台和 Vibe Coding 项目实践。"
     />
     <meta name="theme-color" content="#16254e" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="赵仲煊 - 前端工程师简历" />
     <meta
       property="og:description"
-      content="6 年前端开发经验，主导 AI 平台、微前端和商家生态核心系统建设。"
+      content="6 年前端开发经验，主导 AI 平台、微前端和商家生态核心系统建设，具备 Python 和算法基础。"
     />
     <title>赵仲煊 - 前端工程师简历</title>
     <style>
@@ -38,7 +38,12 @@
         padding: 0;
         background: linear-gradient(180deg, #edf2f7 0%, #e5edf8 100%);
         color: var(--ink);
-        font: 14px/1.7 "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+        font:
+          14px/1.7 "PingFang SC",
+          "Microsoft YaHei",
+          "Helvetica Neue",
+          Arial,
+          sans-serif;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -77,8 +82,12 @@
       .hero {
         padding: 36px 42px 28px;
         background:
-          /* radial-gradient(circle at top right, rgba(72, 129, 255, 0.16), transparent 28%), */
-          linear-gradient(135deg, #0f1d44 0%, #16254e 45%, #0d1735 100%);
+          /* radial-gradient(circle at top right, rgba(72, 129, 255, 0.16), transparent 28%), */ linear-gradient(
+          135deg,
+          #0f1d44 0%,
+          #16254e 45%,
+          #0d1735 100%
+        );
         color: #fff;
       }
 
@@ -101,13 +110,19 @@
         margin-top: 10px;
         font-size: 15px;
         color: rgba(255, 255, 255, 0.88);
-        letter-spacing: 2px;
+        letter-spacing: 0.4px;
       }
 
       .hero-summary {
         margin-top: 18px;
         max-width: 90%;
         color: rgba(255, 255, 255, 0.84);
+      }
+
+      .education-note {
+        margin-top: 10px;
+        color: rgba(255, 255, 255, 0.76);
+        font-size: 13px;
       }
 
       .hero-highlights {
@@ -232,6 +247,20 @@
         gap: 22px;
       }
 
+      .compact-career {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 18px;
+        padding: 12px 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfdff;
+      }
+
+      .compact-career ul {
+        margin-top: 6px;
+      }
+
       .timeline-item {
         padding: 14px 0;
         border-bottom: 1px solid var(--line);
@@ -253,7 +282,6 @@
         font-size: 15px;
         font-weight: 700;
         color: #1e2b48;
-
       }
 
       .timeline-subtitle {
@@ -329,7 +357,6 @@
         margin-top: 6px;
       }
 
-
       @page {
         size: A4;
         margin: 0;
@@ -351,8 +378,12 @@
         body {
           padding: 0;
           background: #fff;
-          font-size: 13px;
-          line-height: 1.55;
+          font-size: 12.2px;
+          line-height: 1.43;
+        }
+
+        html {
+          background: #fff !important;
         }
 
         .resume {
@@ -362,8 +393,13 @@
         }
 
         .hero {
-          padding: 28px 34px 20px;
-          background: linear-gradient(135deg, #0f1d44 0%, #16254e 45%, #0d1735 100%);
+          padding: 24px 34px 18px;
+          background: linear-gradient(
+            135deg,
+            #0f1d44 0%,
+            #16254e 45%,
+            #0d1735 100%
+          );
         }
 
         .hero,
@@ -414,29 +450,38 @@
         }
 
         .main {
-          padding: 20px 34px 28px;
+          padding: 16px 34px 24px;
         }
 
         .section + .section {
-          margin-top: 18px;
+          margin-top: 14px;
         }
 
         .hero-summary,
+        .education-note,
         .project-tags,
         ul {
-          margin-top: 8px;
+          margin-top: 6px;
         }
 
         li + li {
-          margin-top: 4px;
+          margin-top: 2px;
         }
 
         .project {
-          padding: 12px 0 14px;
+          padding: 9px 0 10px;
         }
 
         .timeline-item {
-          padding: 10px 0;
+          padding: 8px 0;
+        }
+
+        .section-title {
+          margin-bottom: 9px;
+        }
+
+        .project-tags span {
+          padding: 2px 7px;
         }
 
         .contact,
@@ -473,6 +518,7 @@
 
         .hero-grid,
         .two-col,
+        .compact-career,
         .project-head,
         .timeline-head {
           grid-template-columns: 1fr;
@@ -492,7 +538,7 @@
           text-align: left;
         }
 
-        .project-url  {
+        .project-url {
           display: none;
         }
         .hero-summary {
@@ -507,26 +553,31 @@
         <div class="hero-grid">
           <div>
             <h1 class="name">赵仲煊</h1>
-            <div class="role">前端工程师</div>
-            <div class="hero-summary">
-              聚焦 <strong>React + TypeScript</strong> 技术栈，兼具 <strong>AI 平台、微前端架构、复杂中后台</strong>
-              与官网站点建设经验。能够独立推进从需求梳理、方案设计、核心开发到联调上线的完整交付，并持续关注体验、性能和工程质量。
+            <div class="role">
+              前端工程师｜AI 平台 / 微前端架构｜6 年 React + TypeScript 开发
             </div>
-            <div class="hero-highlights" aria-label="核心亮点">
-              <span class="hero-pill">6 年前端经验</span>
-              <span class="hero-pill">AI 平台建设</span>
-              <span class="hero-pill">微前端落地</span>
-              <span class="hero-pill">复杂中后台</span>
+            <div class="hero-summary">
+              深耕 <strong>React + TypeScript</strong> 技术栈，兼具
+              <strong
+                >AI 商业化平台自研、阿里淘天微前端、国际化 SEO 站点</strong
+              >
+              可独立完成需求评审、架构方案设计、核心编码、性能优化、上线迭代全流程。
             </div>
           </div>
           <address class="contact">
             <div class="contact-item">
               <span class="contact-label">电话</span>
-              <a class="contact-value is-link" href="tel:18635517772">18635517712</a>
+              <a class="contact-value is-link" href="tel:18635517712"
+                >18635517712</a
+              >
             </div>
             <div class="contact-item">
               <span class="contact-label">邮箱</span>
-              <a class="contact-value is-link" href="mailto:zzxzzx8888@gmail.com">zzxzzx8888@gmail.com</a>
+              <a
+                class="contact-value is-link"
+                href="mailto:zzxzzx8888@gmail.com"
+                >zzxzzx8888@gmail.com</a
+              >
             </div>
             <div class="contact-item">
               <span class="contact-label">GitHub</span>
@@ -539,89 +590,55 @@
                 github.com/sidey-zzy
               </a>
             </div>
+            <div class="contact-item">
+              <span class="contact-label">简历主页</span>
+              <a
+                class="contact-value is-link"
+                href="https://resume.zzxzzx8888.dpdns.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                resume.zzxzzx8888.dpdns.org
+              </a>
+            </div>
           </address>
         </div>
       </section>
 
       <section class="main">
         <section class="section">
-          <h2 class="section-title">个人总结</h2>
-          <div class="summary">
-            6 年前端开发经验，持续参与并主导核心业务系统交付。擅长 React +
-            TypeScript + React Router 技术栈，在 AI Agent 交互界面、复杂中后台系统和国际化站点建设等方向有丰富实践。项目中不仅关注功能交付，也关注复杂业务流程梳理、性能与可维护性优化以及业务效率提升，能够独立承担方案设计、核心开发、联调上线与持续迭代。
-          </div>
-        </section>
-
-        <section class="section">
-          <h2 class="section-title">专业技能</h2>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">React Router</span>
-            <span class="tag">AI SDK</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Ice.js</span>
-            <span class="tag">Zustand</span>
-            <span class="tag">Module Federation</span>
-            <span class="tag">SCSS / CSS Modules</span>
-            <span class="tag">Fusion Design</span>
-            <span class="tag">Ant Design</span>
-            <span class="tag">性能优化</span>
-            <span class="tag">埋点体系</span>
-          </div>
-        </section>
-
-        <section class="section two-col">
-          <div>
-            <h2 class="section-title">工作经历</h2>
-            <div class="timeline-item">
-              <div class="timeline-head">
-                <div>
-                  <div class="timeline-title">杭州博彦科技（阿里淘天商家外包）</div>
-                  <div class="timeline-subtitle">前端工程师</div>
+          <h2 class="section-title">工作/教育经历</h2>
+          <div class="timeline-item">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-title">
+                  阿里淘天商家项目组（杭州博彦科技 / 北京汉克驻场）
                 </div>
-                <div class="timeline-date">2021.10 - 至今</div>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-head">
-                <div>
-                  <div class="timeline-title">北京汉克（阿里淘天商家外包）</div>
-                  <div class="timeline-subtitle">前端工程师</div>
+                <div class="timeline-subtitle">
+                  前端工程师｜淘宝服务市场、千牛工作台、商家服务管理平台
                 </div>
-                <div class="timeline-date">2021.06 - 2021.10</div>
               </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-head">
-                <div>
-                  <div class="timeline-title">兜兜城市发展</div>
-                  <div class="timeline-subtitle">前端工程师</div>
-                </div>
-                <div class="timeline-date">2020.07 - 2021.06</div>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-head">
-                <div>
-                  <div class="timeline-title">医药代表</div>
-                  <div class="timeline-subtitle"></div>
-                </div>
-                <div class="timeline-date">2015 - 2020</div>
-              </div>
+              <div class="timeline-date">2021.06 - 至今</div>
             </div>
           </div>
-
-          <div>
-            <h2 class="section-title">教育经历</h2>
-            <div class="timeline-item">
-              <div class="timeline-head">
-                <div>
-                  <div class="timeline-title">中国药科大学</div>
-                  <div class="timeline-subtitle">药物化学 / 本科</div>
+          <div class="timeline-item">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-title">兜兜城市发展</div>
+                <div class="timeline-subtitle">
+                  前端工程师｜业务管理系统页面开发、基础组件维护、接口联调
                 </div>
-                <div class="timeline-date">2011.09 - 2015.07</div>
               </div>
+              <div class="timeline-date">2020.07 - 2021.06</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-head">
+              <div>
+                <div class="timeline-title">中国药科大学</div>
+                <div class="timeline-subtitle">药物化学 / 本科</div>
+              </div>
+              <div class="timeline-date">2011.09 - 2015.07</div>
             </div>
           </div>
         </section>
@@ -632,10 +649,71 @@
           <article class="project">
             <div class="project-head">
               <div>
-                <a href="https://1route.ai" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://fuwu.taobao.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <h3 class="project-title">淘天商家服务生态平台</h3>
+                </a>
+                <div class="project-role">全权负责前端开发</div>
+              </div>
+              <a
+                class="project-url"
+                href="https://fuwu.taobao.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                fuwu.taobao.com
+              </a>
+            </div>
+            <div class="project-tags">
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Ice.js</span>
+              <span>Module Federation</span>
+              <span>MTOP</span>
+              <span>配置化页面</span>
+              <span>曝光埋点</span>
+            </div>
+            <ul>
+              <li>
+                独立搭建 C
+                端服务市场首页、服务商详情、工具推荐等流量页面，承接日均 10w+
+                商家访问；封装复用型 useExposure 埋点钩子，统一管控全站 75+
+                曝光点位。
+              </li>
+              <li>
+                负责 B 端服务商后台资质入驻、订单履约、结算报税等 15
+                个核心模块，基于 Module Federation 拆分微前端，并对 24+
+                业务路由做动态分包懒加载。
+              </li>
+              <li>
+                千牛工作台内嵌页采用 MT2
+                配置化渲染方案，运营内容无需前端发版即可实时更新；通过
+                RemoteModule 整合 20 余项商家服务 API。
+              </li>
+              <li>
+                沉淀标准化 MTOP
+                请求层、环境切换、全局异常捕获、动态表单、拖拽交互等通用能力，并主导前端
+                Spec 与 AI 辅助开发流程落地。
+              </li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <div>
+                <a
+                  href="https://1route.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <h3 class="project-title">OneRoute 官网与用户控制台</h3>
                 </a>
-                <div class="project-role">独立负责前端方案设计与开发</div>
+                <div class="project-role">
+                  独立从零搭建，全链路负责前端方案设计与开发
+                </div>
               </div>
               <a
                 class="project-url"
@@ -650,23 +728,25 @@
               <span>React Router v7</span>
               <span>React 19</span>
               <span>RSC</span>
-              <span>Tailwind CSS</span>
-              <span>G2</span>
               <span>AI SDK</span>
-              <span>国际化</span>
+              <span>G2</span>
+              <span>国际化 SEO</span>
             </div>
             <ul>
               <li>
-                从 0 到 1 搭建官网与用户控制台一体化应用，解决品牌展示、用户转化和后台使用割裂的问题，覆盖品牌介绍、模型说明、在线咨询、充值支付与用户后台等完整链路。
+                独立搭建一体化 AI 产品官网 +
+                用户控制台，覆盖品牌宣传、模型咨询、充值支付、API
+                密钥、用量统计全链路，面向海内外 AI 开发者提供自助服务。
               </li>
               <li>
-                设计基于 URL 的中英文路由方案，统一处理 `/en` 前缀、语言切换、首访重定向及 canonical / alternate 输出，解决国际化站点常见的路由混乱和 SEO 收录问题。
+                自研 URL
+                驱动多语言路由体系，统一处理语言切换、国际站点重定向、canonical
+                标签输出，完善海外 SEO 基础能力。
               </li>
               <li>
-                负责 API Key 管理、用量日志、趋势分析、充值支付、支付记录和模型管理等核心模块，帮助用户完成接入、使用、计费和运维的闭环；同时通过服务层封装降低页面与接口耦合，便于后续扩展。
-              </li>
-              <li>
-                使用 G2 构建用量趋势和模型明细图表，解决用户难以直观看到调用与费用变化的问题；补充 robots、sitemap、结构化数据与 Open Graph 元信息，完善 SEO 基建和对外传播能力。
+                分层封装通用请求与状态管理模块，基于 G2
+                搭建可视化用量看板，并完整配置 sitemap、robots、结构化数据、OG
+                标签等 SEO 基础设施。
               </li>
             </ul>
           </article>
@@ -674,10 +754,16 @@
           <article class="project">
             <div class="project-head">
               <div>
-                <a href="https://console-global.1route.ai/zh-CN/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://console-global.1route.ai/zh-CN/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <h3 class="project-title">1route-console-ui 管理控制台</h3>
                 </a>
-                <div class="project-role">独立负责前端方案设计与开发</div>
+                <div class="project-role">
+                  独立从零搭建，全链路负责前端方案设计与开发
+                </div>
               </div>
               <a
                 class="project-url"
@@ -692,219 +778,81 @@
               <span>React Router v7</span>
               <span>React 19</span>
               <span>SSR</span>
+              <span>Ant Design</span>
+              <span>Zustand</span>
               <span>G2</span>
-              <span>Ant Design</span>
-              <span>Zustand</span>
               <span>CodeMirror</span>
-              <span>ExcelJS</span>
-              <span>国际化</span>
             </div>
             <ul>
               <li>
-                从 0 到 1 搭建 AI 平台管理后台，覆盖登录鉴权、分析看板、请求日志、审计日志、用户管理、账单告警、模型集成、AI Router 和插件管理等复杂模块，支撑平台运营和内部管理。
+                从零搭建 AI
+                后台管理系统，覆盖登录鉴权、用量审计、用户管理、账单告警、模型路由、插件配置等复杂
+                B 端场景。
               </li>
               <li>
-                基于 React Router 组织多级路由与权限边界，结合通用布局、全局状态与接口层封装，解决复杂菜单和多角色后台容易失控的问题，提升系统可维护性与扩展性。
+                基于 React Router 搭建多级权限路由，搭配 Zustand
+                全局状态管理统一数据流，大幅降低多模块协同维护成本。
               </li>
               <li>
-                使用 Ant Design、CodeMirror、G2 等能力搭建表格、表单、代码配置与图表分析场景，解决配置编辑、日志排查和模型路由策略管理等高复杂度操作场景的交互问题。
-              </li>
-              <li>
-                实现账单导出、价格配置、告警配置等运营能力，并支持按模型、用户、状态码等维度聚合分析，帮助运营和技术团队快速定位问题并提升管理效率。
+                整合代码编辑器、多维数据表格、可视化图表组件，实现账单批量导出、价格策略、异常告警体系，快速定位
+                API 调用与计费相关线上问题。
               </li>
             </ul>
           </article>
+        </section>
 
-          <article class="project">
-            <div class="project-head">
-              <div>
-                <a href="https://docs.1route.ai" target="_blank" rel="noopener noreferrer">
-                  <h3 class="project-title">1route-doc 产品文档站</h3>
-                </a>
-                <div class="project-role">独立负责文档站建设与前端开发</div>
+        <section class="section">
+          <h2 class="section-title">近两月业余技术实验项目</h2>
+          <ul>
+            <li>
+              <div class="project-head">
+                <strong>Web CAD</strong>
+                <a
+                  href="https://smartcad.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >smartcad.app</a
+                >
               </div>
-              <a
-                class="project-url"
-                href="https://docs.1route.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                docs.1route.ai
-              </a>
-            </div>
-            <div class="project-tags">
-              <span>Docusaurus</span>
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>本地搜索</span>
-              <span>中英文文档</span>
-            </div>
-            <ul>
-              <li>
-                基于 Docusaurus 搭建产品文档站，系统沉淀快速开始、模型能力、模型管理与第三方工具集成等内容，解决 AI 平台对外说明分散、开发者接入门槛高的问题。
-              </li>
-              <li>
-                维护中英文双语文档路由映射与页面结构，覆盖推理、流式响应、图像理解、图片生成、PDF、函数调用等能力说明，支撑海外与国内用户统一获取产品信息。
-              </li>
-              <li>
-                集成本地搜索和多语言文档产出能力，解决文档检索效率低和版本维护成本高的问题，提升开发者查阅效率与内容交付效率。
-              </li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <div class="project-head">
               <div>
-                <h3 class="project-title">素材智能助手平台</h3>
-                <div class="project-role">前端开发</div>
+                基于 React Router + Canvas 验证浏览器 CAD
+                编辑器能力，实现高清画布、平移缩放、网格标尺、选择变换、撤销重做、JSON
+                CAD / DXF 解析导出等基础能力。
               </div>
-              <div class="project-url">暂未推广</div>
-            </div>
-            <div class="project-tags">
-              <span>React</span>
-              <span>Ant Design</span>
-              <span>Konva.js</span>
-              <span>Zustand</span>
-              <span>Ice.js</span>
-              <span>Module Federation</span>
-            </div>
-            <ul>
-              <li>
-                参与智能图片生成与素材编辑平台前端建设，围绕 AI 问答、图片生成、格式转换、批注等核心能力完成页面交互与功能串联，支撑创意生产链路在线化。
-              </li>
-              <li>
-                负责编辑器相关页面与业务组件开发，处理图层、画布、操作面板、素材配置等复杂交互，解决编辑器场景下操作路径长、交互复杂的问题，提升工具可用性与操作效率。
-              </li>
-              <li>
-                与算法、后端及产品协作推进生成式能力接入，打通生成、编辑和导出流程，推动业务在创意生产、内容编辑与素材处理方向落地。
-              </li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <div class="project-head">
+            </li>
+            <li>
+              <div class="project-head">
+                <strong>洛克王国世界助手平台</strong>
+                <a
+                  href="https://smartcad.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >lkhub.cn</a
+                >
+              </div>
               <div>
-                <a href="https://work.open.taobao.com/" target="_blank" rel="noopener noreferrer">
-                  <h3 class="project-title">商家服务市场管理平台</h3>
-                </a>
-                <div class="project-role">核心前端开发</div>
+                基于 pnpm Monorepo 搭建玩家 H5、管理后台、小程序、Fastify
+                API、prisma、 postgres 和资讯机器人，验证游戏资料站、数据导入和
+                AI 辅助内容生产链路。
               </div>
-              <a
-                class="project-url"
-                href="https://work.open.taobao.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                work.open.taobao.com
-              </a>
-            </div>
-            <div class="project-tags">
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Ice.js</span>
-              <span>Module Federation</span>
-              <span>Fusion Design</span>
-              <span>@dnd-kit</span>
-            </div>
-            <ul>
-              <li>
-                负责面向淘宝服务商生态的 B2B 商家服务管理平台建设，覆盖服务发布、订单履约、结算财务、资质认证、内容案例库等全生命周期管理，承接 15 个核心模块。
-              </li>
-              <li>
-                采用 Module Federation 微前端方案实现模块独立开发与部署，解决多人并行开发和大体量系统持续迭代带来的协作成本问题；通过 24+ 条路由的 lazy() 动态导入完成代码分割，降低首屏加载体积。
-              </li>
-              <li>
-                封装统一的 MTOP 协议通信层，实现 API 版本管理与多环境自动切换，解决接口调用规范不统一和环境切换成本高的问题，提升稳定性与可维护性。
-              </li>
-              <li>
-                开发资质认证多步骤引导流程，集成 SOP 表单引擎与自定义 Schema，解决复杂表单动态渲染和校验问题，提升认证流程的可配置性与交付效率。
-              </li>
-              <li>
-                实现 16 个子模块的自营结算体系与税务报送能力，覆盖采购单管理、账单统计、多维查询、Excel 导出、图片裁剪和拖拽排序等复杂交互，支撑财务结算和税务报送等关键业务闭环。
-              </li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <div class="project-head">
+            </li>
+            <li>
+              <div class="project-head">
+                <strong>My Company Sim</strong>
+                <a
+                  href="https://smartcad.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  company-sim.zzxzzx8888.dpdns.org</a
+                >
+              </div>
               <div>
-                <a href="https://fuwu.taobao.com/" target="_blank" rel="noopener noreferrer">
-                  <h3 class="project-title">服务市场</h3>
-                </a>
-                <div class="project-role">核心前端开发</div>
+                基于 React + Zustand + Pixi.js
+                构建外包公司模拟经营游戏原型，验证招聘、合同、财务、邮件、仲裁、存档和时间流逝等复杂规则系统。
               </div>
-              <a
-                class="project-url"
-                href="https://fuwu.taobao.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                fuwu.taobao.com
-              </a>
-            </div>
-            <div class="project-tags">
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Swiper</span>
-              <span>ICE Stark</span>
-              <span>Module Federation</span>
-              <span>ColorThief</span>
-            </div>
-            <ul>
-              <li>
-                负责淘宝主营与服务市场相关核心页面建设，涵盖标准首页、服务商工作台首页、服务商导航与统一详情页等多类入口和转化场景，服务于商家导购、内容运营与购买决策链路。
-              </li>
-              <li>
-                首页方向沉淀优惠展示、精选服务推荐、品牌案例、解决方案等模块化运营能力，解决活动与运营内容频繁调整下的复用问题；同时封装基于全局曝光管理器的 useExposure Hook，支持 threshold 曝光检测与埋点优化，覆盖 75+ 处理点。
-              </li>
-              <li>
-                详情页方向建设统一微应用架构，单页面支持 9 种服务类型的差异化展示，解决服务类型多、页面实现分散的问题，使用 PageContext + PageType 枚举驱动条件渲染，一套代码适配多业务类型的 UI 与数据流。
-              </li>
-              <li>
-                实现智能色彩适配、案例浏览组件与跨平台环境兼容，处理 ColorThief 主色提取、轮播懒加载、固定定位与路由差异等问题，提升详情页视觉一致性、信息表达能力和多端稳定性。
-              </li>
-            </ul>
-          </article>
-
-          <article class="project">
-            <div class="project-head">
-              <div>
-                <a href="https://myseller.taobao.com/home.htm/qianniu-service-market/" target="_blank" rel="noopener noreferrer">
-                  <h3 class="project-title">千牛服务市场</h3>
-                </a>
-                <div class="project-role">核心前端开发</div>
-              </div>
-              <a
-                class="project-url"
-                href="https://myseller.taobao.com/home.htm/qianniu-service-market/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                myseller.taobao.com
-              </a>
-            </div>
-            <div class="project-tags">
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Ice.js</span>
-              <span>Fusion Design</span>
-              <span>MT2</span>
-            </div>
-            <ul>
-              <li>
-                负责千牛商家工作台服务市场 Tab 改版，承接服务卡片、智能服务、运营服务和商家工具等核心页面，提升推荐、搜索、导购与订阅续费链路。
-              </li>
-              <li>
-                实现 MT2 配置驱动的动态页面渲染方案，支持预发/正式环境双数据源切换与运营内容热更新，解决运营内容频繁变更依赖前端发版的问题。
-              </li>
-              <li>
-                封装高性能 useExposure Hook，基于全局 IntersectionObserver 管理器实现按 threshold 分组复用，支持 once 模式一次性曝光检测，解决多页面埋点逻辑重复和性能损耗问题，覆盖 75+ 处理点。
-              </li>
-              <li>
-                开发“我的工具”模块并通过 RemoteModule 动态加载远程模块，聚合 20+ 个 MTOP API，实现工具管理、评价提交、优惠券领取和续费提醒等完整闭环，提升商家使用与续费效率。
-              </li>
-            </ul>
-          </article>
+            </li>
+          </ul>
         </section>
       </section>
     </main>
